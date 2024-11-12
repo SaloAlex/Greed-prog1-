@@ -18,8 +18,8 @@ int jugarRonda(std::string& nombreJugador) {
     int dados[5];
     int dadoBloqueador1 = rand() % 6 + 1; // Bloquea un n£mero al azar
     int dadoBloqueador2 = rand() % 6 + 1; // Bloquea otro n£mero al azar
-    cout << "Turno de " << nombreJugador << endl;
-    cout << "Dados bloqueadores: " << dadoBloqueador1 << " y " << dadoBloqueador2 << endl;
+    std::cout << "Turno de " << nombreJugador << std::endl;
+    std::cout << "Dados bloqueadores: " << dadoBloqueador1 << " y " << dadoBloqueador2 << std::endl;
 
     char continuar;
     int dadosDisponibles = 5; // Inicialmente, se lanzan 5 dados
@@ -32,7 +32,7 @@ int jugarRonda(std::string& nombreJugador) {
         // Contar dados v lidos (no bloqueados)
         int dadosValidos = 0;
         for (int i = 0; i < dadosDisponibles; i++) {
-            cout << "Dado " << i + 1 << ": " << dados[i] << endl;
+            std::cout << "Dado " << i + 1 << ": " << dados[i] << std::endl;
 
             if (dados[i] != dadoBloqueador1 && dados[i] != dadoBloqueador2) {
                 sumaRonda += dados[i];
@@ -46,13 +46,16 @@ int jugarRonda(std::string& nombreJugador) {
         }
 
         // Si todos los dados v lidos son iguales y hay al menos 2 dados v lidos, duplicamos el puntaje
+        bool puntosDuplicados = false;
         if (todosIguales && dadosValidos >= 2) {
             sumaRonda *= 2;
-            cout << "­Dados iguales! Puntaje de la tirada duplicado." << endl;
+            puntosDuplicados = true; // Activar la condici¢n de volver a tirar
+            std::cout << "­Todos los dados v lidos son iguales! ­Tu puntaje de esta tirada ha sido duplicado a " << sumaRonda
+                      << " puntos! Est s obligado a volver a tirar.\n";
         }
 
         puntaje += sumaRonda;
-        cout << "Puntaje acumulado de la ronda: " << puntaje << endl;
+        std::cout << "Puntaje acumulado de la ronda: " << puntaje << " puntos.\n";
 
         int nuevosDadosDisponibles = 0; // Se inicializa en 0 para contar dados sin bloquear
         for (int i = 0; i < dadosDisponibles; i++) {
@@ -64,14 +67,20 @@ int jugarRonda(std::string& nombreJugador) {
         // Si no quedan dados disponibles, terminamos la ronda
         dadosDisponibles = nuevosDadosDisponibles;
         if (dadosDisponibles == 0) {
-            cout << "Te has quedado sin dados disponibles en esta ronda." << endl;
+            std::cout << "Te has quedado sin dados disponibles en esta ronda." << std::endl;
             puntaje = 0; // El puntaje de la ronda se pierde
             break;
         }
 
-        // Preguntamos al jugador si quiere volver a tirar los dados disponibles
-        cout << "¨Desea tirar otra vez los dados disponibles? (s/n): ";
-        cin >> continuar;
+        // Si los puntos no se duplicaron, preguntar al jugador si quiere volver a tirar
+        if (!puntosDuplicados) {
+            std::cout << "¨Desea tirar otra vez los dados disponibles? (s/n): ";
+            std::cin >> continuar;
+        } else {
+            // Obliga al jugador a continuar si los puntos fueron duplicados
+            continuar = 's';
+            std::cout << "Debido a que tus puntos se duplicaron, est s obligado a tirar de nuevo.\n";
+        }
 
     } while (continuar == 's');
 
