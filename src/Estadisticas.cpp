@@ -5,14 +5,14 @@
 
 using namespace std;
 
-// Guardamos el nombre del jugador con el puntaje m s alto
+// Guardamos el nombre del jugador con el puntaje mï¿½s alto
 static string mejorJugador;
-static int puntajeMaximo = 0;        // Almacena el puntaje m ximo
+static int puntajeMaximo = 0;        // Almacena el puntaje mï¿½ximo
 static int puntajeJugador1 = 0;      // Guarda el puntaje del Jugador 1
 static int puntajeJugador2 = 0;      // Guarda el puntaje del Jugador 2
 
-// Esta funci¢n guarda el puntaje del Jugador 1 en el modo de un solo jugador.
-// Si el puntaje es mayor que el m ximo registrado, lo actualiza.
+// Esta funciï¿½n guarda el puntaje del Jugador 1 en el modo de un solo jugador.
+// Si el puntaje es mayor que el mï¿½ximo registrado, lo actualiza.
 void registrarPuntajeJugador1(int puntaje, string& nombre) {
     puntajeJugador1 = puntaje;
     if (puntaje > puntajeMaximo) {
@@ -21,8 +21,8 @@ void registrarPuntajeJugador1(int puntaje, string& nombre) {
     }
 }
 
-// Esta funci¢n guarda los puntajes de ambos jugadores en el modo de dos jugadores.
-// Compara los puntajes y actualiza el m ximo si es necesario.
+// Esta funciï¿½n guarda los puntajes de ambos jugadores en el modo de dos jugadores.
+// Compara los puntajes y actualiza el mï¿½ximo si es necesario.
 void registrarPuntajeJugadores(int puntaje1, int puntaje2, string& nombre1, string& nombre2) {
     puntajeJugador1 = puntaje1;
     puntajeJugador2 = puntaje2;
@@ -36,7 +36,7 @@ void registrarPuntajeJugadores(int puntaje1, int puntaje2, string& nombre1, stri
     }
 }
 
-// Esta funci¢n muestra los puntajes de ambos jugadores y el puntaje m s alto registrado.
+// Esta funciï¿½n muestra los puntajes de ambos jugadores y el puntaje mï¿½s alto registrado.
 void mostrarEstadisticas() {
     rlutil::cls();
     rlutil::setColor(rlutil::YELLOW);

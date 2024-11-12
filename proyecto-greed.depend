@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1731430301 source:d:\c++\proyecto-greed\src\juego.cpp
+1731440266 source:d:\c++\proyecto-greed\src\juego.cpp
 	"Juego.h"
 	"Estadisticas.h"
 	"rlutil.h"
 	<iostream>
 	<string>
 
-1731430180 d:\c++\proyecto-greed\src\juego.h
+1731439940 d:\c++\proyecto-greed\src\juego.h
 	<string>
 
 1571584339 d:\c++\proyecto-greed\src\rlutil.h
@@ -23,10 +23,10 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1731430215 d:\c++\proyecto-greed\src\estadisticas.h
+1731439965 d:\c++\proyecto-greed\src\estadisticas.h
 	<string>
 
-1731429984 source:d:\c++\proyecto-greed\src\main.cpp
+1731440233 source:d:\c++\proyecto-greed\src\main.cpp
 	"Interfaz.h"
 	"Juego.h"
 	<ctime>
@@ -34,13 +34,13 @@
 
 1731092340 d:\c++\proyecto-greed\src\interfaz.h
 
-1731430388 source:d:\c++\proyecto-greed\src\estadisticas.cpp
+1731439755 source:d:\c++\proyecto-greed\src\estadisticas.cpp
 	"Estadisticas.h"
 	<string>
 	<iostream>
 	"rlutil.h"
 
-1731429566 source:d:\c++\proyecto-greed\src\interfaz.cpp
+1731439884 source:d:\c++\proyecto-greed\src\interfaz.cpp
 	"Interfaz.h"
 	"rlutil.h"
 	"Juego.h"
@@ -48,7 +48,7 @@
 	<iostream>
 	<limits>
 
-1731180753 source:d:\c++\proyecto-greed\src\tests.cpp
+1731439691 source:d:\c++\proyecto-greed\src\tests.cpp
 	"Juego.h"
 	<iostream>
 
