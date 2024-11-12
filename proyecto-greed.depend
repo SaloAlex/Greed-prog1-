@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1731430301 source:d:\c++\proyecto-greed\src\juego.cpp
+	"Juego.h"
+	"Estadisticas.h"
+	"rlutil.h"
+	<iostream>
+	<string>
+
+1731430180 d:\c++\proyecto-greed\src\juego.h
+	<string>
+
+1571584339 d:\c++\proyecto-greed\src\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1731430215 d:\c++\proyecto-greed\src\estadisticas.h
+	<string>
+
+1731429984 source:d:\c++\proyecto-greed\src\main.cpp
+	"Interfaz.h"
+	"Juego.h"
+	<ctime>
+	<cstdlib>
+
+1731092340 d:\c++\proyecto-greed\src\interfaz.h
+
+1731429654 source:d:\c++\proyecto-greed\src\estadisticas.cpp
+	"Estadisticas.h"
+	<string>
+	<iostream>
+	"rlutil.h"
+
+1731429566 source:d:\c++\proyecto-greed\src\interfaz.cpp
+	"Interfaz.h"
+	"rlutil.h"
+	"Juego.h"
+	"Estadisticas.h"
+	<iostream>
+	<limits>
+
+1731180753 source:d:\c++\proyecto-greed\src\tests.cpp
+	"Juego.h"
+	<iostream>
+
